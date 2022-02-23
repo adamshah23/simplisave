@@ -11,9 +11,6 @@ function App() {
           <div className="pdf">pdf</div>
           <div className="camera" >camera</div>
       </div>
-      <div className="footer"> footer </div>
-
-
 
     </div>
   );
