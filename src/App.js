@@ -3,14 +3,15 @@ import NavbarComp from './Header';
 import FileUploadPage from './FileUpload'
 import UploadPhoto from './Camera'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Storage from './StorageInventory';
 
 
 export default function Router() {
     return ( 
     <BrowserRouter> 
       <Routes>
-        <Route path="/:room" element= {<App/>} />
-        <Route path="/StorageInventory" element= {<App/>} />
+        <Route path="/" element= {<App/>} />
+        <Route path="/StorageInventory" element= {<Storage/>} />
         <Route path="/Home" element= {<App/>} />
       </Routes>
     </BrowserRouter>

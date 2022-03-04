@@ -1,0 +1,9 @@
+.Storage {
+    background-color: rgb(0, 163, 228);
+}
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

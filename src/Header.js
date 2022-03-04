@@ -6,7 +6,7 @@ export default function NavbarComp(props) {
         <div>
         <Navbar className="nav" bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">SimpliSave</Navbar.Brand>
+                <Navbar.Brand href="Home">SimpliSave</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
