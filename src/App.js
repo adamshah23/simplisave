@@ -27,8 +27,8 @@ function App() {
     <div className="App">
       <NavbarComp/>
 
-      <div className="slogan"> Simpily save money by donating and keeping track of your inventory! </div>
-      <div className= "text">Upload your files</div>
+      <div className="slogan"> Simpily save time by donating excess food through our storage inventory platform! </div>
+      <div className= "text">Upload Your Files Here</div>
       <div className="upload-data">
           <div className="pdf"> 
               <FileUploadPage/>
