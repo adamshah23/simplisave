@@ -1,6 +1,7 @@
 import './FileUpload.css';
 import React, {useState} from 'react';
 import {BiFile} from 'react-icons/bi';
+import { useNavigate } from "react-router-dom";
 
 export default function FileUploadPage(){
 	const [selectedFile, setSelectedFile] = useState();
@@ -11,26 +12,11 @@ export default function FileUploadPage(){
 		setIsSelected(true);
 	};
 
-	const handleSubmission = () => {
-		const formData = new FormData();
-
-		formData.append('File', selectedFile);
-
-		fetch(
-			'https://freeimage.host/api/1/upload?key=6d207e02198a847aa98d0a2a901485a5',
-			{
-				method: 'POST',
-				body: formData,
-			}
-		)
-			.then((response) => response.json())
-			.then((result) => {
-				console.log('Success:', result);
-			})
-			.catch((error) => {
-				console.error('Error:', error);
-			});
-	};
+	let navigate = useNavigate(); 
+ 	const routeChange = () =>{ 
+    	let path = `/StorageInventory`; 
+    	navigate(path);
+	 }
 
 	return(
     <div>
@@ -43,19 +29,12 @@ export default function FileUploadPage(){
              </div>
 			{isSelected ? (
 				<div>
-					<p>Filename: {selectedFile.name}</p>
-					<p>Filetype: {selectedFile.type}</p>
-					<p>Size in bytes: {selectedFile.size}</p>
-					<p>
-						lastModifiedDate:{' '}
-						{selectedFile.lastModifiedDate.toLocaleDateString()}
-					</p>
 				</div>
 			) : (
 				<p></p>
 			)}
 			<div className='submit-button'>
-                <button onClick={handleSubmission}>Submit</button>
+                <button onClick={routeChange}>Submit</button>
 			</div>
 		</div>
 	)

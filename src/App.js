@@ -4,6 +4,7 @@ import FileUploadPage from './FileUpload'
 import UploadPhoto from './Camera'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Storage from './StorageInventory';
+import Results from './results';
 
 
 export default function Router() {
@@ -13,6 +14,7 @@ export default function Router() {
         <Route path="/" element= {<App/>} />
         <Route path="/StorageInventory" element= {<Storage/>} />
         <Route path="/Home" element= {<App/>} />
+        <Route path="/Results" element= {<Results/>} />
       </Routes>
     </BrowserRouter>
     );
